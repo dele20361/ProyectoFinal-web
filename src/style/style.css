@@ -1,0 +1,277 @@
+/*
+ brown: rgb(34, 34, 33);
+ hot pink: #c41982;
+*/
+
+body {
+    background-color: #c41982;
+}
+
+@font-face {
+    font-family: "Ahsing";
+    src: url(./fonts/Ahsing-Regular.otf);
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Montserrat ExtraBold";
+    src: url(./fonts/Montserrat-ExtraBold.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Cabin bold";
+    src: url(./fonts/Cabin-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: "Tusker Grotesk";
+    src: url(./fonts/TuskerGrotesk-1800Super.ttf);
+}
+
+* {
+    margin:0;
+    font-family: 'Montserrat';
+}
+
+#root {
+    height: 100vh;
+    width: 99vw;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+}
+
+.presentation {
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(rgb(238, 114, 114), rgb(238, 114, 114),rgb(236, 116, 116), #c41982 70%);
+}
+
+.intro {
+    margin-left: 4vw;
+    color:rgb(58, 12, 37)
+}
+
+.name {
+    font-family: "Ahsing";
+    font-style: italic;
+    letter-spacing: -5px;
+    line-height: 70%;
+
+    font-size: 130px;
+    padding-top: 45vh;
+    color:rgb(58, 12, 37)
+}
+
+.description {
+    width: 80%;
+    font-size: 30px;
+    padding-bottom: 11vh;
+}
+
+.more {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: italic;
+}
+
+.more-icon {
+    height: 30px;
+    width: 30px;
+    background-image: url(./img/down.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.about-me {
+    margin-top:170px;
+    height: 100%;
+    width: 99.68vw;
+    background: url(./img/about-wave.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    animation-name: upDown;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.who-am-i {
+    height: 60%;
+    padding-top: 5%;
+    display: flex;
+    margin-left: 13vw;
+}
+
+.who-am-i > * {
+    color: rgb(238, 157, 157);
+}
+
+.titles {
+    color: rgb(241, 169, 169);
+    font-style: italic;
+    letter-spacing: -10px;
+    animation-name: turningColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.about-title {
+    font-size: 150px;
+    width: 9vw;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 58%;
+}
+
+.move {
+    margin-left: 17vw;
+}
+
+.about-description {
+    margin-left: 16vw;
+    margin-top: 3vw;
+    width: 500px;
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Experience */
+.experience-container {
+    height: 95%;
+    width: 99.6vw;
+    background-color: #0049b7;
+}
+
+.experience-title {
+    font-family: "Ahsing";
+    display: flex;
+    padding-top:10vh;
+    justify-content: center;
+    font-size: 100px;
+    color:rgb(181, 208, 231);
+}
+
+.chart {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 60%;
+    margin-left:20%;
+    margin-top:2%;
+    background-image: url(./img/React.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* my work */
+.myWork {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    height: 110vh;
+    width: 99.6vw;
+    background-image: url(./img/projects.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.myWork-title{
+    margin-top: 10vh;
+    margin-left: 5vw;
+}
+
+.projects {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 26%;
+    height: 100%;
+    font-family: "Tusker Grotesk";
+    font-size: 200px;
+    color: rgb(238, 114, 114);
+    margin-left:35vw;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+    width: 20%;
+    height: 70%;
+    margin-top: 28vh;
+    margin-left: 15vw;
+    grid-column-gap: 7em;
+}
+
+.project {
+    border: none;
+    font-size: 30px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: rgb(238, 114, 114);
+    color:rgb(34, 34, 33);
+    font-weight: 900;
+}
+
+.project:hover {
+    background-color: #3b67e0;
+    color: antiquewhite;
+}
+
+.contact {
+    padding: 5em;
+}
+
+.contact-title {
+    font-family: "Montserrat ExtraBold";
+    color:rgb(192, 217, 238);
+}
+
+.contact-p {
+    font-weight: 900;
+    color:rgb(192, 217, 238);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    margin:0;
+    padding:0;
+    background:transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(238, 114, 114); 
+}
+
+@keyframes turningColor {
+    0% {color: rgb(241, 169, 169);}
+    50% {color: rgb(235, 116, 116);}
+    100% {color: rgb(241, 169, 169);}
+}
+
+@media (min-width:1500px){
+    .projects {
+        width: 40%;
+        font-size: 270px;
+        margin-left:15vw;
+    }
+
+    .about-me {
+        height: 120vh;
+    }
+
+    .experience-title {
+        padding-top:3vh;
+    }
+
+}
